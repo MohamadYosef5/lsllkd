@@ -1,0 +1,195 @@
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+/*  Main style  */
+:root {
+  --primeRed: hsl(0, 100%, 74%);
+  --primeGreen: hsl(154, 59%, 51%);
+  --AccentBlue: hsl(248, 32%, 49%);
+  --neutralDarkBlue: hsl(249, 10%, 26%);
+  --neutralGrayishBlue: hsl(246, 25%, 77%);
+  --fw-regular: 400;
+  --fw-meduim: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+}
+
+body {
+  background-color: var(--primeRed);
+  background-image: url(/images/bg-intro-desktop.png);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  width: 49%;
+  justify-self: center;
+}
+.title h1 {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+}
+.details {
+  width: 50%;
+}
+.ad {
+  background-color: var(--AccentBlue);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+.try {
+  font-weight: var(--fw-bold);
+}
+.price {
+  color: var(--neutralGrayishBlue);
+}
+.info {
+  color: black;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.8rem;
+}
+input {
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: var(--neutralGrayishBlue) solid 1px;
+}
+button {
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: var(--primeGreen);
+  color: white;
+}
+
+input:focus-visible {
+  border: black solid 1px;
+  outline: var(--neutralGrayishBlue) solid 1px;
+}
+
+.foot {
+  align-self: center;
+  font-size: 12px;
+}
+.greyMark {
+  color: var(--neutralGrayishBlue);
+}
+.redMark {
+  color: var(--primeRed);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .title {
+    width: 100%;
+    justify-self: center;
+  }
+  .title h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .title p {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+  .details {
+    width: 100%;
+  }
+  .ad {
+    padding-right: 20%;
+    padding-left: 20%;
+    margin-bottom: 2rem;
+  }
+  .foot {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
